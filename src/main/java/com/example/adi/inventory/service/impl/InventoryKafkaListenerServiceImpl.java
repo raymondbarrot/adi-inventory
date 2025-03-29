@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class InventoryKafkaListenerServiceImpl implements InventoryKafkaListenerService {
     @Override
-    @KafkaListener(topics = "${kafka.topic.recommendation}", groupId = "recommendation-group")
+    @KafkaListener(topics = "${kafka.topic.inventory}", groupId = "inventory-group")
     public void consumeMessage(BidOffer bidOffer) {
         log.info("Consumed: {}", bidOffer);
     }
