@@ -18,4 +18,13 @@ public interface InventoryRepository extends JpaRepository<InventoryItem, String
                              @Param("availableResources") Integer availableResources,
                              @Param("amount") Double amount,
                              @Param("code") String code);
+
+    InventoryItem findByCode(String code);
+
+    @Modifying
+    @Transactional
+    @Query(value = "UPDATE inventory_item SET available_resources=:availableResources " +
+            "WHERE code=:code", nativeQuery = true)
+    void updateAvailableResources(@Param("availableResources") Integer availableResources,
+                             @Param("code") String code);
 }
