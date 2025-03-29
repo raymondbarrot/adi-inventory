@@ -34,6 +34,7 @@ public class InventoryServiceImpl implements InventoryService {
     public InventoryResponse updateInventoryItem(InventoryRequest request) {
         repository.updateInventoryItem(request.getName(), request.getAvailableResources(),
                 request.getAmount(), request.getCode());
+        publishMessage(request);
         return InventoryResponse.builder()
                 .status("Success")
                 .reason("Inventory item successfully updated.")
