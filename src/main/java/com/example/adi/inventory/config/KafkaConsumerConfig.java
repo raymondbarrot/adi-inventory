@@ -1,6 +1,6 @@
 package com.example.adi.inventory.config;
 
-import com.example.adi.inventory.model.InventoryRequest;
+import com.example.adi.inventory.model.BidOffer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,7 +23,7 @@ public class KafkaConsumerConfig {
     private final String GROUP_ID = "inventory-group-id";
 
     @Bean
-    public ConsumerFactory<String, InventoryRequest> consumerFactory() {
+    public ConsumerFactory<String, BidOffer> consumerFactory() {
         Map<String, Object> props = new HashMap<>();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
         props.put(ConsumerConfig.GROUP_ID_CONFIG, GROUP_ID);
@@ -33,8 +33,8 @@ public class KafkaConsumerConfig {
     }
 
     @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, InventoryRequest> kafkaListenerContainerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, InventoryRequest> factory =
+    public ConcurrentKafkaListenerContainerFactory<String, BidOffer> kafkaListenerContainerFactory() {
+        ConcurrentKafkaListenerContainerFactory<String, BidOffer> factory =
                 new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
         return factory;
