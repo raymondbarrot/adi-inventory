@@ -23,10 +23,8 @@ public class InventoryKafkaListenerServiceImpl implements InventoryKafkaListener
     public void consumeMessage(BidOffer bidOffer) {
         log.info("Consumed: {}", bidOffer);
         if(bidOffer.getStatus().equals(BidStatus.ACCEPTED.name())){
-            log.info("Here");
             InventoryItem item = repository.findByCode(bidOffer.getItemCode());
             if(item!=null) {
-                log.info("Item {}", item);
                 updateAvailableResources(
                         item.getAvailableResources() - bidOffer.getNumberOfResources(),
                         item.getCode());
