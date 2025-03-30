@@ -58,3 +58,34 @@ Steps on running the applications:
    }
 
 6. Setup other services the same way.
+
+ARCHITECTURE
+
+- REST API
+- microservices
+- event-driven
+
+FUNCTIONALITY
+
+Inventory
+Endpoints:
+- /add
+- /update
+
+- Publishes to recommendation service
+- Listens to bidding service
+
+Bidding
+Endpoints:
+- /add
+- /update
+
+- Publishes to inventory service
+- Listens to recommendation service
+
+Recommendation
+- Publishes to bidding service
+- Listens to inventory service
+
+Used Kafka as it is more scalable and can provide more real time functionality
+Kafka can handle large amount of messages at a time in real time
