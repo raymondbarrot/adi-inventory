@@ -1,4 +1,4 @@
-Steps on running the applications:
+<b>Steps on running the applications:</b>
 
 1. Create new MySQL schema adi_db
 2. Make sure that it is running on localhost:3306
@@ -60,20 +60,22 @@ Steps on running the applications:
 6. Setup other services the same way.
 
 <br/><br/>
-ARCHITECTURE
+<b>ARCHITECTURE</b>
 
 - REST API
 - microservices
 - event-driven
 
 <br/><br/>
-FUNCTIONALITY
+<b>FUNCTIONALITY</b>
 
 Inventory Service<br/>
 Endpoints:
 - /add
 - /update
 
+<br/>
+Kafka
 - Publishes to recommendation service
 - Listens to bidding service
 
@@ -82,10 +84,13 @@ Endpoints:
 - /add
 - /update
 
+<br/>
+Kafka:
 - Publishes to inventory service
 - Listens to recommendation service
 
 Recommendation Service<br/>
+Kafka:
 - Publishes to bidding service
 - Listens to inventory service
 
