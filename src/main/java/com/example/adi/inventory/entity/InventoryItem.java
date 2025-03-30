@@ -13,8 +13,12 @@ import lombok.*;
 @Entity
 public class InventoryItem {
     @Id
+    @Column(unique = true)
     private String itemId;
+
+    @Column(unique = true)
     private String code;
+
     private String name;
     private Integer availableResources;
     private Double amount;
