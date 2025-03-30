@@ -8,7 +8,7 @@ Steps on running the applications:
    Or change the kafka.bootstrap.server in application.properties
 5. Trigger inventory or bidding
 
-   EndPoint(POST)
+   - EndPoint(POST)
    http://localhost:8081/inventory/add
 
    Sample Payload:
@@ -18,7 +18,8 @@ Steps on running the applications:
        "availableResources": 100,
        "amount": 20.0
    }
-   EndPoint(PUT)
+
+   - EndPoint(PUT)
    http://localhost:8081/inventory/update
 
    Sample Payload:
@@ -29,7 +30,7 @@ Steps on running the applications:
        "amount": 25.0
    }
 
-   EndPoint(POST)
+   - EndPoint(POST)
    http://localhost:8083/bidding/add
 
    Sample Payload:
@@ -41,7 +42,7 @@ Steps on running the applications:
        "itemCode": "IT01"
    }
 
-   EndPoint(PUT)
+   - EndPoint(PUT)
    http://localhost:8083/bidding/update
 
    Sample Payload:
