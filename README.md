@@ -73,7 +73,6 @@ Inventory Service<br/>
 Endpoints:
 - /add
 - /update
-<br/>
 
 Kafka
 - Publishes to recommendation service
@@ -83,7 +82,6 @@ Bidding Service<br/>
 Endpoints:
 - /add
 - /update
-<br/>
 
 Kafka:
 - Publishes to inventory service
