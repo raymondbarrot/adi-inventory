@@ -59,22 +59,22 @@
 
 6. Setup other services the same way.
 
-<br/><br/>
+<br/>
 <b>ARCHITECTURE</b>
 
 - REST API
 - microservices
 - event-driven
 
-<br/><br/>
+<br/>
 <b>FUNCTIONALITY</b>
 
 Inventory Service<br/>
 Endpoints:
 - /add
 - /update
-
 <br/>
+
 Kafka
 - Publishes to recommendation service
 - Listens to bidding service
@@ -83,8 +83,8 @@ Bidding Service<br/>
 Endpoints:
 - /add
 - /update
-
 <br/>
+
 Kafka:
 - Publishes to inventory service
 - Listens to recommendation service
