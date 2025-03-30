@@ -6,9 +6,9 @@ Steps on running the applications:
 3. Set the mysql username and password in application.properties
 4. Make sure kafka is running on localhost:9092
    Or change the kafka.bootstrap.server in application.properties
-5. Trigger inventory
+5. Trigger inventory or bidding
 
-   EndPoint
+   EndPoint(POST)
    http://localhost:8081/inventory/add
 
    Sample Payload:
@@ -18,6 +18,39 @@ Steps on running the applications:
        "availableResources": 100,
        "amount": 20.0
    }
+   EndPoint(PUT)
+   http://localhost:8081/inventory/update
+
+   Sample Payload:
+   {
+       "code": "IT01",
+       "name": "Updated Item 01",
+       "availableResources": 120,
+       "amount": 25.0
+   }
+
+   EndPoint(POST)
+   http://localhost:8083/bidding/add
+
+   Sample Payload:
+   {
+       "bidId": "BID01",
+       "amount": 30.0,
+       "numberOfResources": 10,
+       "status": "NEW",
+       "itemCode": "IT01"
+   }
+
+   EndPoint(PUT)
+   http://localhost:8083/bidding/update
+
+   Sample Payload:
+   {
+       "bidId": "BID01",
+       "amount": 30.0,
+       "numberOfResources": 10,
+       "status": "ACCEPTED",
+       "itemCode": "IT01"
+   }
 
 6. Setup other services the same way.
-7. Check the RestController for endpoints and payload.
