@@ -11,7 +11,7 @@ Steps on running the applications:
    - EndPoint(POST)
    http://localhost:8081/inventory/add
 
-   Sample Payload:
+   - Sample Payload:
    {
        "code": "IT01",
        "name": "New Item 01",
@@ -19,10 +19,11 @@ Steps on running the applications:
        "amount": 20.0
    }
 
+
    - EndPoint(PUT)
    http://localhost:8081/inventory/update
 
-   Sample Payload:
+   - Sample Payload:
    {
        "code": "IT01",
        "name": "Updated Item 01",
@@ -30,10 +31,11 @@ Steps on running the applications:
        "amount": 25.0
    }
 
+
    - EndPoint(POST)
    http://localhost:8083/bidding/add
 
-   Sample Payload:
+   - Sample Payload:
    {
        "bidId": "BID01",
        "amount": 30.0,
@@ -42,10 +44,11 @@ Steps on running the applications:
        "itemCode": "IT01"
    }
 
+
    - EndPoint(PUT)
    http://localhost:8083/bidding/update
 
-   Sample Payload:
+   - Sample Payload:
    {
        "bidId": "BID01",
        "amount": 30.0,
