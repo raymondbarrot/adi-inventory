@@ -7,7 +7,6 @@ import com.example.adi.inventory.repository.InventoryRepository;
 import com.example.adi.inventory.service.InventoryService;
 import com.example.adi.inventory.util.ObjectCreationUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.kafka.clients.producer.ProducerRecord;
 import org.springframework.stereotype.Service;
 
 @Slf4j

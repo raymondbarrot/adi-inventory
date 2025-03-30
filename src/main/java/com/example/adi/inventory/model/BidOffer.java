@@ -1,7 +1,5 @@
 package com.example.adi.inventory.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.*;
 
 @Getter
